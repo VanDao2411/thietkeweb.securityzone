@@ -16,3 +16,12 @@ document.querySelectorAll('#faq .q').forEach((q)=>{
     }
   });
 });
+
+document.querySelectorAll('#solutions .more-toggle').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const card = btn.closest('.card');
+    const opened = card.classList.toggle('open');
+    // đổi nhãn nút
+    btn.textContent = opened ? 'Thu gọn ↑' : 'Xem thêm →';
+  });
+});
